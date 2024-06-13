@@ -6,10 +6,11 @@
 - [x] Crear index
 - [x] Crear repositorio git
 - [] Crear Componentes:
+  - [x] Componente Footer
   - [] Componente Principal
   - [] Componente skills
   - [] Componente AboutMe
   - [] Componente Formulario
   - [] Componente Proyectos
-- [] Archivos en formato svg
+- [x] Archivos en formato svg
 - [] Deploy

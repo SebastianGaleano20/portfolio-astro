@@ -1,5 +1,6 @@
 ---
 import Footer from '../layouts/Footer.astro';
+import Card from '../components/Card.astro';
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -10,15 +11,39 @@ import Footer from '../layouts/Footer.astro';
 	<title>SebasDev</title>
 </head>
 <body>
-	<h1>Hola</h1>
+	<Card>
 	<Footer/>
 </body>
 </html>
 
-<style>
-	body{
-	background: rgb(10, 39, 96);
+<style is:global>
+	* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Barlow", sans-serif;
+    font-style: italic;
+  }
+  
+  /* Estilos sombreados */
+  
+  .box-shadow {
+    border: 5px solid #80ff60;
+    box-shadow: 0px 0px 10px #fafafa;
+  }
+  
+  .white-shadow {
+    border: 5px solid #fafafa;
+    box-shadow: 0 0 10px #80ff60;
+  }
+  
+  body {
+    background: rgb(10, 39, 96);
     background: radial-gradient(circle, rgba(10, 39, 96, 1) 0%, rgba(15, 16, 65, 1) 100%);
     color: #fafafa;
-	}
+  }
+  
+  main {
+    display: grid;
+  }
 </style>
