@@ -1,0 +1,40 @@
+<article class="skills-container box-shadow">
+    <h2>Skills Tegnologicos</h2>
+    <div class="logos-container">
+        <img src="html.svg" alt="HTML5">
+        <img src="css.svg" alt="CSS">
+        <img src="js.svg" alt="Javascripts">
+        <img src="nodejs.svg" alt="NodeJS">
+        <img src="express.svg" alt="ExpressJS">
+        <img src="git.svg" alt="GIT">
+    </div>
+</article>
+
+<style>
+    .skills-container {
+    margin: 1em;
+    text-align: center;
+  }
+  
+  .logos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    padding: 1.2em;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  
+    & img {
+      border-radius: 50%;
+      border: 2px solid #80ff60;
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+    }
+  
+    img:hover {
+      transform: scale(1.2);
+    }
+  }
+</style>
