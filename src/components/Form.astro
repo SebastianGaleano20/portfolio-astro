@@ -1,0 +1,40 @@
+<section class="form-container box-shadow">
+    <form>
+        <h2>Contactame:</h2>
+        <label for="name">Nombre: </label>
+        <input type="text" id="name" placeholder="Ingrese su nombre" />
+        <label for="affair">Asunto: </label>
+        <input type="text" id="affair" placeholder="Asunto del mensaje" />
+        <label for="message">Mensaje:</label>
+        <textarea id="message" cols="30" rows="10"></textarea>
+        <button class="btn">Enviar</button>
+    </form>
+</section>
+
+<style>
+    .form-container {
+        margin: 3em 1em;
+        padding: 1em;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & h2 {
+            margin: 0.5em;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.2em;
+        }
+
+        input,
+        textarea {
+            padding: 0.5em;
+            width: 100%;
+            color: #010235;
+            font-weight: bold;
+        }
+    }
+</style>
