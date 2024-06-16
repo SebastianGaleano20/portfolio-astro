@@ -1,7 +1,7 @@
 ---
-import Footer from '../layouts/Footer.astro';
 import Card from '../components/Card.astro';
 import Aboutme from '../components/Aboutme.astro';
+import Footer from '../layouts/Footer.astro';
 ---
 <html lang="es">
 <head>
@@ -12,9 +12,11 @@ import Aboutme from '../components/Aboutme.astro';
 </head>
 <body>
 	<a href="/about">Sobre mi</a>
-	<Card>
-	<Footer>
+	<Card />
+  <Aboutme />
+  <Footer/>
 </body>
+
 </html>
 
 <style is:global>
