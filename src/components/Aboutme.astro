@@ -1,7 +1,3 @@
----
-import { link } from "astro/dist/helper";
----
-
 <article class="about-me-container white-shadow">
   <h2>¡Sobre mi!</h2>
   <div class="btn-container">
@@ -33,9 +29,9 @@ import { link } from "astro/dist/helper";
   </p>
   <div class="pdf-container">
     <p>Aquí puedes descargar mi CV:</p>
-    <a href="/cv.pdf" download>
+    <button class="btn"><a href="/cv.pdf" download>
       Descargar CV
-    </a>
+    </a></button>
   </div>
 </article>
 
@@ -45,7 +41,9 @@ import { link } from "astro/dist/helper";
     padding: 0.3em;
     text-align: center;
     max-width: 100%;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     & h2 {
       margin-bottom: 0.2em;
       color: #80ff60;
@@ -55,14 +53,13 @@ import { link } from "astro/dist/helper";
       padding: 0.5em;
     }
   }
-
+  .pdf-container button{
+   margin: 0 auto;
+  }
   .btn-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-  }
-  .pdf-container a{
-     color: #80ff60;
   }
   .btn {
     width: 100px;

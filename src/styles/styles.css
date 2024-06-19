@@ -21,6 +21,9 @@
         text-decoration: none;
         color: #fafafa;
     }
+    a:hover{
+        color: #80ff60;
+    }
 }
 
 .box-shadow {
@@ -45,11 +48,10 @@ main {
 
 @media (min-width: 600px) {
     main {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .sect-hello {
-        grid-column: 1 / -1;
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
