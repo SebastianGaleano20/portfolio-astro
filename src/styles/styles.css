@@ -42,3 +42,29 @@ body {
     background: radial-gradient(circle, rgb(13, 31, 66) 0%, rgb(3, 3, 31) 100%);
     color: #fafafa;
 }
+
+@media(min-width: 600px) {
+    .logos-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1em
+    }
+
+    .logos-container img {
+        max-width: 100%;
+    }
+
+    .cert-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-area: 2 / 1 / 3 / 3;
+    }
+    .works-container{
+        grid-area: 3 / 1 / 4 / 3;
+    }
+    .proyects-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    footer {
+        grid-area: 4/1/5/3;
+    }
+}
