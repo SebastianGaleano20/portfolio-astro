@@ -1,6 +1,5 @@
 <section class="sect-hello box-shadow">
-  <div
-    class="img-container">
+  <div class="img-container">
     <img id="img-logo" src="logo.svg" alt="logoPersonal" />
   </div>
   <article class="hello-container">
@@ -11,20 +10,21 @@
       tegnologias. Programo como freelancer hace 2 años en proyectos personales.
     </p>
     <span>Bienvenido a mi sitio web y portfolio personal</span>
-    <button class="btn" style="display:block"><a href="./cv"> Ingresar</a></button>
+    <button class="btn" style="display:block"
+      ><a href="./cv"> Ingresar</a></button
+    >
   </article>
 </section>
 
 <style>
   .sect-hello {
-    margin: 5em 1em;
+    position: relative;
+    top: 50px;
+    margin: 1em;
     padding: 1em;
   }
   .img-container {
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     max-width: 150px;
     max-height: 150px;
     border-radius: 50%;
@@ -37,14 +37,14 @@
       object-fit: cover;
     }
   }
- 
+
   @keyframes shadow {
     to {
       box-shadow: 0px 0px 10px #fafafa;
     }
 
     from {
-      box-shadow: 0px 0px 50px #fafafa;
+      box-shadow: 0px 0px 30px #fafafa;
     }
   }
   .hello-container {
@@ -62,8 +62,12 @@
     .sect-hello {
       position: relative;
       top: 50px;
-      padding: 2em
+      padding: 2em;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
     }
+
     .img-container {
       max-width: 300px;
       max-height: 300px;
