@@ -1,5 +1,5 @@
 <article class="cert-container box-shadow">
-    <div class="info-cert-container">
+    <div class="info-cert-container white-shadow">
         <h3>Programador web FullStack</h3>
         <span>UTN</span>
         <p>Duracion: 6 meses</p>
@@ -7,7 +7,7 @@
             <img src="/C4.png" alt="certificado1" />
         </div>
     </div>
-    <div class="info-cert-container">
+    <div class="info-cert-container box-shadow">
         <h3>Ingles IT A1.1</h3>
         <span>Argentina Programa</span>
         <p>Duracion: 1 mes</p>
@@ -15,7 +15,7 @@
             <img src="/C1.png" alt="UTN" />
         </div>
     </div>
-    <div class="info-cert-container">
+    <div class="info-cert-container white-shadow">
         <h3>Programador web Front-End</h3>
         <span>Argentina Programa 4.0</span>
         <p>Duracion: 2 meses</p>
@@ -23,7 +23,7 @@
             <img src="/C2.png" alt="ArgPrograma" />
         </div>
     </div>
-    <div class="info-cert-container">
+    <div class="info-cert-container box-shadow">
         <h3>Programador web Front-End ReactJS</h3>
         <span>Argentina Programa 4.0</span>
         <p>Duracion: 2 meses</p>
@@ -36,20 +36,27 @@
 <style>
     .cert-container {
         margin: 1em;
+        padding: 1em;
     }
-    .info-cert-container {
+    .info-cert-container{
+        margin: 1em;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-items: center;
         & h3 {
+            margin: 0.5em;
             color: #80ff60;
         }
     }
     .img-container {
         padding: 0.5em;
-        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
     img {
+        object-fit: contain;
         width: 100%;
     }
+
 </style>

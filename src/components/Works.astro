@@ -1,7 +1,7 @@
 <section class="works-container white-shadow">
     <h2>Proyectos web</h2>
     <section class="proyects-container">
-        <article class="proyect-container">
+        <article class="proyect-container box-shadow">
             <h3>Pandora App</h3>
             <p>Pagina web estatica e-commerce en proceso para panificadora. Realizado con ReactJS</p>
             <a target="_blank" href="https://pandora-of.vercel.app/"
@@ -11,7 +11,7 @@
                 /></a
             >
         </article>
-        <article class="proyect-container">
+        <article class="proyect-container white-shadow">
             <h3>Portfolio Personal</h3>
             <p>Primer portfolio personal realizado en 2023 con ReactJS</p>
             <a target="_blank" href="https://sebasdev-portfolio.vercel.app/"
@@ -21,7 +21,7 @@
                 /></a
             >
         </article>
-        <article class="proyect-container">
+        <article class="proyect-container box-shadow">
             <h3>Proyecto examen GlobalLearning</h3>
             <p>Pagina web estatica para rescatar animales</p>
             <a
@@ -48,14 +48,15 @@
 
     .proyects-container {
         display: grid;
+        gap: 1em;
         justify-items: center;
         align-items: end;
+        padding: 1em;
     }
 
     .proyect-container {
-        margin: 1em;
         width: 100%;
-
+        height: 100%;
         & img {
             max-width: 100%;
         }
