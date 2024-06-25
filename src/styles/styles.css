@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -44,13 +45,13 @@ body {
 }
 
 @media(min-width: 600px) {
-    .logos-container {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1em
-    }
-
-    .logos-container img {
-        max-width: 100%;
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1/2fr 1fr;
+        }
+    .logos-container{
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
 
     .cert-container {
