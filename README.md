@@ -5,12 +5,12 @@
 - [x] Iniciar proyecto
 - [x] Crear index
 - [x] Crear repositorio git
-- [] Crear Componentes:
+- [x] Crear Componentes:
   - [x] Componente Footer
-  - [] Componente Principal
-  - [] Componente skills
-  - [] Componente AboutMe
-  - [] Componente Formulario
-  - [] Componente Proyectos
+  - [x] Componente Principal
+  - [x] Componente skills
+  - [x] Componente AboutMe
+  - [x] Componente Formulario
+  - [x] Componente Proyectos
 - [x] Archivos en formato svg
-- [] Deploy
+- [x] Deploy
