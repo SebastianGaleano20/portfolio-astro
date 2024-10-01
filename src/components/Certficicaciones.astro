@@ -92,7 +92,7 @@
         margin: 0.5em;
         display: flex;
         flex-direction: column;
-        justify-items: center;
+        justify-content: space-evenly;
         & h3, h4 {
             color: #80ff60;
             margin: 0.5em;
@@ -110,9 +110,6 @@
     }
     .img-container {
         margin: 1em;
-        padding: 0.5em;
-        max-width: 100vh;
-        height: auto;
     }
     img {
         object-fit: contain;
@@ -120,12 +117,8 @@
     }
     @media(min-width: 600px){
         .cert-container{
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        grid-auto-rows: auto;
-        justify-content: center;
-        align-items: center;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         grid-gap: 1em;
-        grid-auto-flow: dense;
         }
     }
 </style>
