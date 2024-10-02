@@ -6,32 +6,34 @@ import { RiNextjsFill } from "react-icons/ri";
     <h2>Proyectos web</h2>
     <section class="proyects-container">
         <article class="proyect-container box-shadow">
-            <h3>NextJS App</h3>
-            <p>Proyecto Freelancer - Pagina web dinamica con NextJS conectada a una base de datos tipo PostgreSQL desde Vercel. <RiNextjsFill /></p>
-            <a target="_blank" href="https://nextjs-proyect-amber.vercel.app/"
+            <h3>Escucha Facil App</h3>
+            <p> Proyecto Final Beca InterTEC - Aplicación de música con IA integrada. <br>
+                Proyecto FullStack con APIRestful creada con NodeJS, Express, PostgreSQL, ReactJS, TailwindCSS.  <br>
+                Utilizando la API de Cohere para generar respuestas con inteligencia artificial mendiante comandos de voz. 
+                Se puede interactuar con la Aplicación mediante voz con los siguientes comandos: <br>
+                - Cambiar fondo (Rojo, Azul,Violeta,Comida,Estrellas). <br>
+                - Ir a Historial - Ir a Playlists - Ir a Inicio. <br>
+                - Obtener información sobre los creadores de la app. información sobre la Aplicación y sus funciones y hasta cuenta chistes!.
+            </p>
+            <a target="_blank" href="https://escuchafacil.vercel.app/"
                 ><img
-                    src="/images/nextjsapp.png"
-                    alt="Nextjs Img"
+                    src="/images/Ef.png"
+                    alt="Escucha Facil img"
                 /></a
             >
         </article>
         <article class="proyect-container box-shadow">
             <h3>Barrio Fino Page</h3>
-            <p>Proyecto Freelancer - Pagina web dinamica para barbería familiar. Realizado con NextJS, TailwindCSS (DaisyUI) y React-Icons</p>
+            <p> Proyecto Freelancer - Pagina web dinamica para barbería familiar. <br>
+                Realizado con NextJS, TailwindCSS (DaisyUI) y React-Icons. <br>
+                Interacción del usuario para solicitar turnos - ver imagenes de cortes realizados
+                Pagina responsive para celulares.
+                
+            </p>
             <a target="_blank" href="https://barriofino-barber.vercel.app/"
                 ><img
                     src="/images/barber.png"
                     alt="Barber Img"
-                /></a
-            >
-        </article>
-        <article class="proyect-container white-shadow">
-            <h3>Portfolio Personal</h3>
-            <p>Primer portfolio personal realizado en 2023 con ReactJS</p>
-            <a target="_blank" href="https://sebasdev-portfolio.vercel.app/"
-                ><img
-                    src="/images/port.png"
-                    alt="Portfolio img"
                 /></a
             >
         </article>
@@ -44,6 +46,16 @@ import { RiNextjsFill } from "react-icons/ri";
                 ><img
                     src="/images/page.png"
                     alt="Page img"
+                /></a
+            >
+        </article>
+        <article class="proyect-container box-shadow">
+            <h3>NextJS App</h3>
+            <p>Proyecto Freelancer - Pagina web dinamica con NextJS conectada a una base de datos tipo PostgreSQL desde Vercel. <RiNextjsFill /></p>
+            <a target="_blank" href="https://nextjs-proyect-amber.vercel.app/"
+                ><img
+                    src="/images/nextjsapp.png"
+                    alt="Nextjs Img"
                 /></a
             >
         </article>
@@ -69,6 +81,10 @@ import { RiNextjsFill } from "react-icons/ri";
     }
 
     .proyect-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
         width: 100%;
         height: 100%;
         & img {
@@ -77,6 +93,7 @@ import { RiNextjsFill } from "react-icons/ri";
 
         h3 {
             color: #80ff60;
+            margin: 1em;
         }
 
         p {
