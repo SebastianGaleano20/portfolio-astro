@@ -7,34 +7,50 @@ import { RiNextjsFill } from "react-icons/ri";
     <section class="proyects-container">
         <article class="proyect-container box-shadow">
             <h3>Escucha Facil App</h3>
-            <p> Proyecto Final Beca InterTEC - Aplicación de música con IA integrada. <br>
-                Proyecto FullStack con APIRestful creada con NodeJS, Express, PostgreSQL, ReactJS, TailwindCSS.  <br>
-                Utilizando la API de Cohere para generar respuestas con inteligencia artificial mendiante comandos de voz. 
-                Se puede interactuar con la Aplicación mediante voz con los siguientes comandos: <br>
-                - Cambiar fondo (Rojo, Azul,Violeta,Comida,Estrellas). <br>
-                - Ir a Historial - Ir a Playlists - Ir a Inicio. <br>
-                - Obtener información sobre los creadores de la app. información sobre la Aplicación y sus funciones y hasta cuenta chistes!.
+            <p>
+                Proyecto Final Beca InterTEC - Aplicación de música con IA
+                integrada. <br />
+                Proyecto FullStack con APIRestful creada con NodeJS, Express, PostgreSQL,
+                ReactJS, TailwindCSS. <br />
+                Utilizando la API de Cohere para generar respuestas con inteligencia
+                artificial mendiante comandos de voz. Se puede interactuar con la
+                Aplicación mediante voz con los siguientes comandos: <br />
+                - Cambiar fondo (Rojo, Azul,Violeta,Comida,Estrellas). <br />
+                - Ir a Historial - Ir a Playlists - Ir a Inicio. <br />
+                - Obtener información sobre los creadores de la app. información
+                sobre la Aplicación y sus funciones y hasta cuenta chistes!.
             </p>
             <a target="_blank" href="https://escuchafacil.vercel.app/"
-                ><img
-                    src="/images/Ef.png"
-                    alt="Escucha Facil img"
-                /></a
+                ><img src="/images/Ef.png" alt="Escucha Facil img" /></a
             >
         </article>
         <article class="proyect-container box-shadow">
             <h3>Barrio Fino Page</h3>
-            <p> Proyecto Freelancer - Pagina web dinamica para barbería familiar. <br>
-                Realizado con NextJS, TailwindCSS (DaisyUI) y React-Icons. <br>
-                Interacción del usuario para solicitar turnos - ver imagenes de cortes realizados
-                Pagina responsive para celulares.
-                
+            <p>
+                Proyecto Freelancer - Pagina web dinamica para barbería
+                familiar. <br />
+                Realizado con NextJS, TailwindCSS (DaisyUI) y React-Icons. <br
+                />
+                Interacción del usuario para solicitar turnos - ver imagenes de cortes
+                realizados Pagina responsive para celulares.
             </p>
             <a target="_blank" href="https://barriofino-barber.vercel.app/"
-                ><img
-                    src="/images/barber.png"
-                    alt="Barber Img"
-                /></a
+                ><img src="/images/barber.png" alt="Barber Img" /></a
+            >
+        </article>
+        <article class="proyect-container box-shadow">
+            <h3>API Restfull</h3>
+            <p>
+                Proyecto Final InterTEC <br />
+                API Restfull con NodeJS, Express
+                conectado a Base de datos relacional
+                PostgreSQL y nube AWS. Validaciones de datos con Joi, Hash de contraseñas,
+                creacion y validacion de Tokens. <br />
+                Utilizando Schemas y modelos con Prisma 
+                Repo Github: https://github.com/SebastianGaleano20/pandora-api
+            </p>
+            <a target="_blank" href="https://proyectofinal-integrartec-back.onrender.com/api"
+                ><img src="/images/api1.png" alt="Api Img" /></a
             >
         </article>
         <article class="proyect-container box-shadow">
@@ -43,20 +59,17 @@ import { RiNextjsFill } from "react-icons/ri";
             <a
                 target="_blank"
                 href="https://per-didos-encon-trados.netlify.app/"
-                ><img
-                    src="/images/page.png"
-                    alt="Page img"
-                /></a
+                ><img src="/images/page.png" alt="Page img" /></a
             >
         </article>
         <article class="proyect-container box-shadow">
             <h3>NextJS App</h3>
-            <p>Proyecto Freelancer - Pagina web dinamica con NextJS conectada a una base de datos tipo PostgreSQL desde Vercel. <RiNextjsFill /></p>
+            <p>
+                Proyecto Freelancer - Pagina web dinamica con NextJS conectada a
+                una base de datos tipo PostgreSQL desde Vercel. <RiNextjsFill />
+            </p>
             <a target="_blank" href="https://nextjs-proyect-amber.vercel.app/"
-                ><img
-                    src="/images/nextjsapp.png"
-                    alt="Nextjs Img"
-                /></a
+                ><img src="/images/nextjsapp.png" alt="Nextjs Img" /></a
             >
         </article>
     </section>
@@ -90,7 +103,13 @@ import { RiNextjsFill } from "react-icons/ri";
         & img {
             max-width: 100%;
         }
-
+        a{
+            padding: 0 1.5em;
+        }
+        img:hover{
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
         h3 {
             color: #80ff60;
             margin: 1em;
@@ -100,5 +119,4 @@ import { RiNextjsFill } from "react-icons/ri";
             margin: 0.5em;
         }
     }
-
 </style>
