@@ -1,11 +1,10 @@
-import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
-import tailwind from '@astro/tailwind'
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
   devToolbar: {
-    enabled: false
+    enabled: false,
   },
-  integrations: [react(), tailwind()]
+  integrations: [react()],
 });

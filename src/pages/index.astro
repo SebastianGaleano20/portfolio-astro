@@ -1,21 +1,8 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
 import Card from "../components/Card.astro";
-import "../styles/styles.css";
-import HelloCard from '../components/HelloCard.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/icono.svg" type="image/x-icon">
-    <title>SebasDev</title>
-    <ViewTransitions />
-  </head>
-  <body>
-    <HelloCard/>
-    <Card />
-  </body>
-</html>
+<Layout title="Dracodev" description="Welcome to my portfolio">
+  <Card />
+</Layout>
