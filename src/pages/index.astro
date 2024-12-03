@@ -8,15 +8,19 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
   @media (max-width: 768px) {
     body {
       background-image: url("images/font.jpeg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      height: 100vh;
     }
   }
 </style>
