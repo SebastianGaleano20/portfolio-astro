@@ -1,7 +1,6 @@
 ---
 import "../styles/styles.css";
 import NavBar from "./NavBar.astro";
-import DarkModeToggle from "../components/DarkModeToggle.astro";
 interface Props {
   title: string;
   description: string;
@@ -19,8 +18,7 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <NavBar />
-    <DarkModeToggle />
+    <!-- <NavBar /> -->
     <slot />
   </body>
 </html>
