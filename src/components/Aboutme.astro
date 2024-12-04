@@ -1,69 +1,44 @@
-<article class="about-me-container white-shadow">
-  <h2>¡Sobre mi!</h2>
+<article
+  class="m-5 p-5 flex flex-col align-center white-shadow bg-white text-black dark:bg-dark-gradient dark:text-darkText"
+>
+  <h2 class="text-emerald-500">¡Sobre mi!</h2>
   <div class="btn-container">
-    <button class="btn-me btn" id="data-btn">Presentación</button>
-    <button class="btn-me btn" id="hobbie-btn">Hobbies</button>
-    <button class="btn-me btn" id="education-btn">Educacion</button>
+    <button class="btn-me btn dark:text-white" id="data-btn"
+      >Presentación</button
+    >
+    <button class="btn-me btn dark:text-white" id="hobbie-btn">Hobbies</button>
+    <button class="btn-me btn dark:text-white" id="education-btn"
+      >Educacion</button
+    >
   </div>
-  <p style="display: block;" class="txt" id="txt-data">
-    Desarrollador web full stack principiante con experiencia como Freelancer en proyectos personales.
-Actualmente cursando estudios de programación web, busco mi primer trabajo en IT.
-Soy responsable, aprendo rápidamente y tengo gran atención a los detalles.
-Constantemente busco desafíos que me permitan crecer profesionalmente.
+  <p style="display: block;" class="text-black dark:text-white" id="txt-data">
+    Desarrollador web full stack principiante con experiencia como Freelancer en
+    proyectos personales. Actualmente cursando estudios de programación web,
+    busco mi primer trabajo en IT. Soy responsable, aprendo rápidamente y tengo
+    gran atención a los detalles. Constantemente busco desafíos que me permitan
+    crecer profesionalmente.
   </p>
-  <p style="display: none;" class="txt" id="txt-hobbie">
+  <p style="display: none;" class="text-black dark:text-white" id="txt-hobbie">
     Me gusta el fútbol, tengo la suerte de realizar este deporte diariamente con
     amigos y familia. Me gustan mucho los animales y tengo 2 gatos como mascotas
     llamados León y Gamma. Hago ejercicio diariamente y en mis tiempos libres
     pinto sobre lienzos de tela con acrílico.
   </p>
-  <p style="display: none;" class="txt" id="txt-edu">
+  <p style="display: none;" class="text-black dark:text-white" id="txt-edu">
     Participé en programas de aprendizaje como Argentina Programa 4.0, donde
     adquirí conocimientos básicos de Front-End, ReactJS, Python y JavaScript.
     También completé un curso avanzado de Programador Web Full Stack en la UTN,
     el cual finalicé en 2023. Actualmente, estoy participando en una beca
     llamada IntegrarTec con el objetivo de obtener otro título como Programador
-    Web Full Stack. 
+    Web Full Stack.
   </p>
   <div class="pdf-container">
     <p>Aquí puedes descargar mi CV:</p>
-    <button class="btn"><a href="/pdf/cv.pdf" download>
-      Descargar CV
-    </a></button>
+    <button class="btn"
+      ><a href="/pdf/cv.pdf" download> Descargar CV </a></button
+    >
   </div>
 </article>
-
-<style>
-  .about-me-container {
-    margin: 1em;
-    padding: 0.3em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    & h2 {
-      margin-bottom: 0.2em;
-      color: #80ff60;
-    }
-
-    p {
-      padding: 0.5em;
-    }
-  }
-  .pdf-container button{
-   margin: 0 auto;
-  }
-  .btn-container{
-    display: flex;
-  }
-  .btn-me {
-    max-width: 100px;
-    margin: 0 0.3em;
-  }
-
-  .btn:hover {
-    color: #80ff60;
-  }
-</style>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {

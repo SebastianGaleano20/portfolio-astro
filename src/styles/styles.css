@@ -11,11 +11,6 @@
   text-align: center;
   font-weight: 1.2rem;
 }
-body {
-  background: rgb(7, 24, 58);
-  background: radial-gradient(circle, rgb(13, 31, 66) 0%, rgb(3, 3, 31) 100%);
-  color: #fafafa;
-}
 
 .btn {
   margin: 0 auto;
@@ -23,12 +18,12 @@ body {
   padding: 0.5em;
   background-color: transparent;
   border: 2px solid #80ff60;
-  color: #fafafa;
+  color: #000000;
   cursor: pointer;
 
   & a {
     text-decoration: none;
-    color: #fafafa;
+    color: #000;
   }
 
   a:hover {
