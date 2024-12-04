@@ -1,0 +1,59 @@
+---
+interface Props {
+  numberOfStars?: number;
+}
+
+const { numberOfStars = 50 } = Astro.props;
+
+const stars = Array.from({ length: numberOfStars }, () => ({
+  top: `${Math.random() * 100}%`,
+  left: `${Math.random() * 100}%`,
+  delay: `${Math.random() * 2}s`
+}));
+---
+
+<section class="star-field">
+  {stars.map((star, index) => (
+    <section
+      class="star"
+      style={`top: ${star.top}; left: ${star.left}; animation-delay: ${star.delay};`}
+    />
+  ))}
+</section>
+
+<style>
+  .star-field {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .star {
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    animation: twinkle 2s infinite;
+  }
+
+  .star:nth-child(odd) {
+    animation-duration: 3s;
+  }
+
+  .star:nth-child(even) {
+    animation-duration: 1.5s;
+  }
+</style>
