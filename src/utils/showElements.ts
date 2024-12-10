@@ -1,5 +1,5 @@
 export const hideAllSections = (): void => {
-    const sections = document.querySelectorAll<HTMLElement>('#experience, #philosophy, #search');
+    const sections = document.querySelectorAll<HTMLElement>('#experience, #philosophy-section, #search');
     sections.forEach((section) => {
       section.classList.add('hidden');
     });

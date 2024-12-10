@@ -9,7 +9,7 @@ export const initializeAboutHandlers = (): void => {
     },
     philosophy: {
       button: document.getElementById('my-philosophy') as HTMLButtonElement,
-      section: document.getElementById('philosophy') as HTMLElement
+      section: document.getElementById('philosophy-section') as HTMLElement
     },
     search: {
       button: document.getElementById('my-search') as HTMLButtonElement,
