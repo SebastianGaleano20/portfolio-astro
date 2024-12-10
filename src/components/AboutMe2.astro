@@ -1,75 +1,133 @@
-<section class="w-full p-4 rounded-lg shadow sm:p-8">
-    <h2
-        class="mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl"
+<section id="app" class="w-full p-4 rounded-lg shadow sm:p-8">
+    <h1
+        class="mb-4 text-4xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl"
     >
-        About me
-    </h2>
+        <span
+            class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
+            >Acerca de mí</span
+        >
+    </h1>
     <figure class="max-w-lg">
         <img
             class="h-auto max-w-full rounded-lg"
-            src="images/font1.jpeg"
+            src="icons/logo.svg"
             alt="image description"
         />
-        <figcaption
-            class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400"
-        >
-            Imagen
-        </figcaption>
     </figure>
     <section class="m-3">
-        <h3 class="mb-6 text-lg font-normal lg:text-xl sm:px-16 xl:px-48">
-            FullStack Developer
+        <h3
+            class="mb-4 text-white text-2xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl"
+        >
+            Sebastian Galeano <br />
+            <span
+                class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
+                >Full Stack Developer - MERN</span
+            >
         </h3>
+        <p class="mb-3">
+            ¡Hola Mundo! Soy un Desarrollador apasionado por la programación con
+            más de 2 años de experiencia trabajando en proyectos tanto
+            académicos como profesionales. Mi enfoque principal es crear
+            soluciones eficientes y escalables utilizando una amplia gama de
+            tecnologías y herramientas.
+        </p>
     </section>
-    <p class="mb-3">
-        ¡Hola! Soy un Desarrollador Fullstack apasionado por la programación con
-        más de 2 años de experiencia trabajando en proyectos tanto académicos
-        como profesionales. Mi enfoque principal es crear soluciones eficientes
-        y escalables utilizando una amplia gama de tecnologías y herramientas.
-    </p>
-    <p class="mb-3">
-        📚 Mi experiencia 
-        A lo largo de mi carrera, he trabajado en el
-        desarrollo de aplicaciones web completas, desempeñando tanto el rol de
-        front-end como back-end. Mi experiencia incluye el uso de varios
-        frameworks y tecnologías, tales como: Front-end: React.js, Next.js, y
-        Astro. Back-end: Node.js, NestJS. Bases de datos: Experiencia con
-        PostgreSQL y Prisma ORM para la gestión de bases de datos relacionales.
-        Además, tengo experiencia creando APIs RESTful, utilizando prácticas de
-        desarrollo modernas como el patrón MVC para estructurar proyectos, y
-        diseñando diagramas de bases de datos para asegurar la eficiencia y
-        escalabilidad de los sistemas.
-    </p>
-    <p>
-        💼 Proyectos y Freelance He trabajado tanto en proyectos académicos como
-        en el mundo real. Como freelancer, he desarrollado soluciones para
-        emprendimientos como una barbería, donde diseñé y desarrollé páginas web
-        y APIs para gestionar sus servicios. Esto me permitió mejorar mis
-        habilidades de comunicación con el cliente, entender sus necesidades y
-        entregar productos de calidad a tiempo.
-    </p>
-    <p>
-        🛠️Herramientas y habilidades Mi enfoque hacia la calidad del código es
-        uno de mis mayores principios, por lo que me he capacitado en Testing
-        utilizando herramientas como Playwright, Vitest y Cypress. Además, he
-        aprendido a migrar proyectos de JavaScript a TypeScript, lo que me ha
-        permitido escribir código más robusto y fácil de mantener. Soy un firme
-        creyente del enfoque Mobile First y siempre implemento diseños
-        responsivos para asegurar que las aplicaciones que desarrollo sean
-        completamente funcionales en cualquier dispositivo.
-    </p>
-    <p>
-        🚀 Mi filosofía Me considero autodidacta y tengo una gran pasión por la
-        programación. Dedico más de 2 horas diarias a aprender sobre nuevas
-        tecnologías y mejorar las que ya manejo, lo que me permite mantenerme
-        actualizado con las últimas tendencias y buenas prácticas en el
-        desarrollo de software.
-    </p>
-    <p>
-        👨‍💻 Lo que busco Estoy buscando formar parte de un equipo donde pueda
-        aportar mis habilidades técnicas, aprender de otros profesionales y
-        colaborar en la creación de productos innovadores. Mi objetivo es seguir
-        creciendo como desarrollador y seguir aprendiendo día a día para
-        convertirme en un experto en el campo.
-    </p>
+    <section id="buttons-container" class="flex justify-center m-1">
+        <button
+            id="my-experience"
+            class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
+        >
+            <span
+                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-darkBg dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+            >
+                Mi experiencia
+            </span>
+        </button>
+        <button
+            id="my-philosofy"
+            class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
+        >
+            <span
+                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-darkBg dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+            >
+                Mi Filosofía
+            </span>
+        </button>
+        <button
+            id="my-search"
+            class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
+        >
+            <span
+                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-darkBg dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+            >
+                Lo que busco
+            </span>
+        </button>
+    </section>
+    <section>
+        <section id="experience">
+            <h3
+                class="mb-4 text-xl font-extrabold text-gray-900 md:text-3xl lg:text-5xl"
+            >
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
+                    >Mi experiencia</span
+                >
+            </h3>
+            <p class="mb-3">
+                A lo largo de mi carrera, he trabajado en el desarrollo de
+                aplicaciones web completas, desempeñando tanto el rol de
+                front-end como back-end. Mi experiencia incluye el uso de varios
+                frameworks y tecnologías, tales como: Front-end: React.js,
+                Next.js, y Astro. Back-end: Node.js, NestJS. Bases de datos:
+                Experiencia con PostgreSQL y Prisma ORM para la gestión de bases
+                de datos relacionales. Además, tengo experiencia creando APIs
+                RESTful, utilizando prácticas de desarrollo modernas como el
+                patrón MVC para estructurar proyectos, y diseñando diagramas de
+                bases de datos para asegurar la eficiencia y escalabilidad de
+                los sistemas.
+            </p>
+        </section>
+        <section id="philosophy" class="hidden">
+            <h3
+                class="mb-4 text-xl font-extrabold text-gray-900 md:text-3xl lg:text-5xl"
+            >
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
+                    >Mi Filosofía</span
+                >
+            </h3>
+            <p>
+                Me considero autodidacta y tengo una gran pasión por la
+                programación. Dedico más de 2 horas diarias a aprender sobre
+                nuevas tecnologías y mejorar las que ya manejo, lo que me
+                permite mantenerme actualizado con las últimas tendencias y
+                buenas prácticas en el desarrollo de software.
+            </p>
+        </section>
+        <section id="search" class="hidden">
+            <h3
+                class="mb-4 text-xl font-extrabold text-gray-900 md:text-3xl lg:text-5xl"
+            >
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
+                    >Lo que busco</span
+                >
+            </h3>
+            <p>
+                Estoy buscando formar parte de un equipo donde pueda aportar mis
+                habilidades técnicas, aprender de otros profesionales y
+                colaborar en la creación de productos innovadores. Mi objetivo
+                es seguir creciendo como desarrollador y seguir aprendiendo día
+                a día para convertirme en un experto en el campo.
+            </p>
+        </section>
+    </section>
 </section>
+
+<script>
+    import { initializeAboutHandlers } from "@/utils/buttonHandler";
+    document.addEventListener("DOMContentLoaded", () => {
+        initializeAboutHandlers();
+    });
+</script>
