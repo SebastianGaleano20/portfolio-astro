@@ -1,34 +1,16 @@
 ---
 import Card from "@/components/Card.astro";
 import Layout from "@/layouts/Layout.astro";
-import StarsField from "@/components/StarsField.astro";
-
-interface Props {
-  numberOfStars?: number;
-}
-
-const { numberOfStars = 150 } = Astro.props;
 ---
 
-<section>
-  <article class="starry-night">
-    <StarsField numberOfStars={150} />
-  </article>
-  <Layout title="Dracodev" description="Welcome to my portfolio">
-    <Card />
-  </Layout>
-</section>
+<Layout title="Dracodev" description="Welcome to my portfolio">
+  <Card />
+</Layout>
 
 <style>
   body {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .starry-night {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
   }
 </style>
