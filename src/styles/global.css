@@ -35,6 +35,25 @@
   .head-Gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-emerald-600;
   }
+
+ 
+.custom-button {
+  @apply inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-gray-900 rounded-lg bg-gradient-to-br from-green-400 to-blue-600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.custom-button span {
+  @apply text-white relative px-5 py-2.5 transition-all ease-in duration-75 bg-darkBg dark:bg-gray-900 rounded-md text-lg font-medium lg:text-xl;
+}
+
+.custom-button:hover {
+  background-image: linear-gradient(to bottom right, #38b2ac, #3182ce);
+}
+
+.custom-button:hover span {
+  background-color: transparent;
+}
 }
 
 * {
