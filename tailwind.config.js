@@ -12,6 +12,7 @@ export default {
         darkGradientStart: "rgb(13, 31, 66)",
         darkGradientEnd: "rgb(3, 3, 31)",
         darkText: "#fafafa",
+        
       },
       backgroundImage: {
         "dark-gradient":
