@@ -12,7 +12,7 @@ export default {
         darkGradientStart: "rgb(13, 31, 66)",
         darkGradientEnd: "rgb(3, 3, 31)",
         darkText: "#fafafa",
-        
+        customBlue: "#01cbf4"
       },
       backgroundImage: {
         "dark-gradient":
