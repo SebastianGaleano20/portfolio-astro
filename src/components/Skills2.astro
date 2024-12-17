@@ -1,8 +1,12 @@
-<section class="grid gap-4">
+---
+import Footer from '@/components/Footer.astro'
+---
+
+<section class="grid gap-4 justify-center">
     <h1
         class="mt-2 text-3xl font-extrabold md:text-4xl lg:text-5xl head-Gradient"
     >
-        &lt; Skills /&gt;
+        &lt;Skills /&gt;
     </h1>
     <section class="grid gap-4">
         <section
@@ -15,7 +19,7 @@
                     alt="image description"
                 />
             </figure>
-            <p class="text-md lg:text-2xl">
+            <p class="text-sm font-bold lg:text-2xl">
                 Mi enfoque hacia la calidad del código es uno de mis mayores
                 principios, por lo que me he capacitado en Testing utilizando
                 herramientas como Playwright, Vitest y Cypress. Además, he
@@ -28,9 +32,9 @@
             </p>
         </section>
 
-        <section>
+        <section class="m-2">
             <article>
-                <h3>Languages</h3>
+                <h3 class="head-Gradient">  &lt;Languages /&gt;</h3>
                 <section class="grid grid-cols-2 gap-4 p-2">
                     <section class="card-skills">
                         <figure class="max-w-36">
@@ -53,7 +57,7 @@
                 </section>
             </article>
             <article>
-                <h3>Library / Framework Frontend</h3>
+                <h3 class="head-Gradient">  &lt;Library | Framework Frontend /&gt;</h3>
                 <section class="grid grid-cols-2 gap-4 p-2">
                     <section class="card-skills">
                         <figure class="max-w-36">
@@ -78,7 +82,7 @@
                 </section>
             </article>
             <article>
-                <h3>Library / Framework Backend</h3>
+                <h3 class="head-Gradient">  &lt;Library | Framework Backend /&gt;</h3>
                 <section class="grid grid-cols-2 gap-4 p-2">
                     <section class="card-skills">
                         <figure class="max-w-36">
@@ -98,7 +102,7 @@
                 </section>
             </article>
             <article>
-                <h3>Database</h3>
+                <h3 class="head-Gradient">  &lt;Database /&gt;</h3>
                 <section class="grid grid-cols-2 gap-4 p-2">
                     <section class="card-skills">
                         <figure class="max-w-36">
@@ -113,7 +117,7 @@
                 </section>
             </article>
             <article>
-                <h3>Framework CSS / UI Component</h3>
+                <h3 class="head-Gradient">  &lt;Framework CSS | UI Component /&gt;</h3>
                 <section class="grid grid-cols-2 gap-4 p-2">
                     <section class="card-skills">
                         <figure class="max-w-36">
@@ -136,7 +140,22 @@
                 </section>
             </article>
             <article>
-                <h3>Tools</h3>
+                <h3 class="head-Gradient">  &lt;Testing /&gt;</h3>
+                <section class="grid grid-cols-2 gap-4 p-2">
+                    <section class="card-skills">
+                        <figure class="max-w-36">
+                            <img src="/icons/playwrite.png" alt="Playwrite" />
+                        </figure>
+                    </section>
+                    <section class="card-skills">
+                        <figure class="max-w-36">
+                            <img src="/icons/vitest.svg" alt="Vitest" />
+                        </figure>
+                    </section>
+                </section>
+            </article>
+            <article>
+                <h3 class="head-Gradient">  &lt;Tools /&gt;</h3>
                 <section class="grid grid-cols-2 gap-4 p-2">
                     <section  class="card-skills">
                         <figure class="max-w-36">
@@ -177,4 +196,10 @@
             </article>
         </section>
     </section>
+    <Footer />
 </section>
+<style>
+    h3 {
+        @apply text-lg font-extrabold md:text-2xl lg:text-3xl
+    }
+</style>
