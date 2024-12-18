@@ -36,7 +36,6 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-emerald-600;
   }
 
-
   .custom-button {
     @apply inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-gray-900 rounded-lg bg-gradient-to-br from-green-400 to-blue-600;
     position: relative;
@@ -55,8 +54,8 @@
     background-color: transparent;
   }
 
-  .card-skills {
-    @apply p-4 border-2 border-customBlue rounded-lg shadow bg-gray-300
+  .card-blue {
+    @apply p-4 border-2 border-customBlue rounded-lg shadow 
   }
 }
 
