@@ -16,10 +16,10 @@ const { title, description, numberOfStars = 150 } = Astro.props;
     <meta name="description" content={description} />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/logo.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="/icons/logo.svg" type="image/x-icon" />
     <title>{title}</title>
   </head>
-  <body class="min-h-screen text-black bg-dark-gradient text-darkText">
+  <body class="max-h-screen text-black bg-dark-gradient text-darkText">
     <section>
       <article class="starry-night">
         <StarsField numberOfStars={150} />
