@@ -43,7 +43,7 @@
   }
 
   .custom-button span {
-    @apply text-white relative px-5 py-2.5 transition-all ease-in duration-75 bg-darkBg dark:bg-gray-900 rounded-md text-lg font-medium lg:text-xl;
+    @apply text-white relative px-5 py-2.5 transition-all ease-in duration-75 bg-darkBg dark:bg-gray-900 rounded-md text-sm font-medium lg:text-xl;
   }
 
   .custom-button:hover {
@@ -55,7 +55,7 @@
   }
 
   .card-blue {
-    @apply p-4 border-2 border-customBlue rounded-lg shadow 
+    @apply p-2 border-2 border-customBlue rounded-lg
   }
 }
 
