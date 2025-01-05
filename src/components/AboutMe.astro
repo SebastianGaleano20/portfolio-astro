@@ -4,15 +4,17 @@
     >
         &lt; Acerca de mi /&gt;
     </h1>
-    <article class="grid gap-4 justify-center justify-items-center md:grid-cols-2 md:gap-6">
-        <figure class="max-w-xs lg:max-w-md">
-            <img
-                class="h-auto max-w-full rounded-lg"
-                src="/icons/logo.svg"
-                alt="image description"
-            />
-        </figure>
-        <article class="card-blue p-4">
+    <article>
+        <article class="card-blue p-4 md:max-w-full">
+            <!-- Image -->
+            <figure class="max-w-sm">
+                <img
+                    class="h-auto max-w-full rounded-lg"
+                    src="/icons/logo.svg"
+                    alt="image description"
+                />
+            </figure>
+            <!-- Info -->
             <h3
                 class="text-white text-xl font-extrabold md:text-2xl lg:text-3xl mb-2"
             >
@@ -26,12 +28,13 @@
                 soluciones eficientes y escalables utilizando una amplia gama de
                 tecnologías y herramientas.
             </p>
+            <!-- Stack -->
             <h3
                 class="mb-2 head-Gradient text-xl font-extrabold md:text-2xl lg:text-4xl"
             >
                 &lt;Stack Tecnológico /&gt;
             </h3>
-            <article class="grid gap-2 grid-cols-5 md:grid-cols-7">
+            <article class="mb-4 grid gap-2 grid-cols-5 md:grid-cols-7">
                 <section class="card-blue">
                     <figure class="max-w-15">
                         <img
@@ -72,75 +75,83 @@
                     </figure>
                 </section>
             </article>
-        </article>
-        <article class="card-blue mb-4">
-            <section
-                id="buttons-container"
-                class="flex justify-center m-2 lg:justify-around"
-            >
-                <button id="my-experience" class="custom-button group">
-                    <span>Mi Experiencia</span>
-                </button>
-                <button id="my-philosophy" class="custom-button group">
-                    <span>Filosofía aplicada</span>
-                </button>
-                <button id="my-search" class="custom-button group">
-                    <span> Lo que busco </span>
-                </button>
-            </section>
-            <section>
-                <section id="experience">
-                    <h3
-                        class="text-xl font-extrabold md:text-2xl lg:text-3xl head-Gradient"
-                    >
-                        &lt; Mi experiencia /&gt;
-                    </h3>
-                    <p class="text-sm md:text-md lg:text-xl">
-                        A lo largo de mi carrera, he trabajado en el desarrollo
-                        de aplicaciones web completas, desempeñando tanto el rol
-                        de front-end como back-end. Mi experiencia incluye el
-                        uso de varios frameworks y tecnologías, tales como:
-                        Front-end: React.js, Next.js, y Astro. Back-end:
-                        Node.js, NestJS. Bases de datos: Experiencia con
-                        PostgreSQL y Prisma ORM para la gestión de bases de
-                        datos relacionales. Además, tengo experiencia creando
-                        APIs RESTful, utilizando prácticas de desarrollo
-                        modernas como el patrón MVC para estructurar proyectos,
-                        y diseñando diagramas de bases de datos para asegurar la
-                        eficiencia y escalabilidad de los sistemas.
-                    </p>
+            <!-- More info -->
+            <article class="card-blue md:max-w-full">
+                <!-- Botons -->
+                <section
+                    id="buttons-container"
+                    class="flex justify-center m-2 lg:justify-around"
+                >
+                    <button id="my-experience" class="custom-button group">
+                        <span>Mi Experiencia</span>
+                    </button>
+                    <button id="my-philosophy" class="custom-button group">
+                        <span>Filosofía aplicada</span>
+                    </button>
+                    <button id="my-search" class="custom-button group">
+                        <span> Lo que busco </span>
+                    </button>
                 </section>
-                <section id="philosophy-section" class="hidden">
-                    <h3
-                        class="text-xl font-extrabold md:text-2xl lg:text-3xl head-Gradient"
-                    >
-                        &lt; Mi Filosofía /&gt;
-                    </h3>
-                    <p class="text-sm md:text-md lg:text-xl">
-                        Me considero autodidacta y tengo una gran pasión por la
-                        programación. Dedico más de 2 horas diarias a aprender
-                        sobre nuevas tecnologías y mejorar las que ya manejo, lo
-                        que me permite mantenerme actualizado con las últimas
-                        tendencias y buenas prácticas en el desarrollo de
-                        software.
-                    </p>
+                <!-- Info -->
+                <section>
+                    <!-- Experience -->
+                    <section id="experience">
+                        <h3
+                            class="text-xl font-extrabold md:text-2xl lg:text-3xl head-Gradient"
+                        >
+                            &lt; Mi experiencia /&gt;
+                        </h3>
+                        <p class="text-sm md:text-md lg:text-xl">
+                            A lo largo de mi carrera, he trabajado en el
+                            desarrollo de aplicaciones web completas,
+                            desempeñando tanto el rol de front-end como
+                            back-end. Mi experiencia incluye el uso de varios
+                            frameworks y tecnologías, tales como: Front-end:
+                            React.js, Next.js, y Astro. Back-end: Node.js,
+                            NestJS. Bases de datos: Experiencia con PostgreSQL y
+                            Prisma ORM para la gestión de bases de datos
+                            relacionales. Además, tengo experiencia creando APIs
+                            RESTful, utilizando prácticas de desarrollo modernas
+                            como el patrón MVC para estructurar proyectos, y
+                            diseñando diagramas de bases de datos para asegurar
+                            la eficiencia y escalabilidad de los sistemas.
+                        </p>
+                    </section>
+                    <!-- Philosophy -->
+                    <section id="philosophy-section" class="hidden">
+                        <h3
+                            class="text-xl font-extrabold md:text-2xl lg:text-3xl head-Gradient"
+                        >
+                            &lt; Mi Filosofía /&gt;
+                        </h3>
+                        <p class="text-sm md:text-md lg:text-xl">
+                            Me considero autodidacta y tengo una gran pasión por
+                            la programación. Dedico más de 2 horas diarias a
+                            aprender sobre nuevas tecnologías y mejorar las que
+                            ya manejo, lo que me permite mantenerme actualizado
+                            con las últimas tendencias y buenas prácticas en el
+                            desarrollo de software.
+                        </p>
+                    </section>
+                    <!-- Search -->
+                    <section id="search" class="hidden">
+                        <h3
+                            class="text-xl font-extrabold md:text-2xl lg:text-3xl head-Gradient"
+                        >
+                            &lt; Lo que busco /&gt;
+                        </h3>
+                        <p class="text-sm md:text-md lg:text-xl">
+                            Estoy buscando formar parte de un equipo donde pueda
+                            aportar mis habilidades técnicas, aprender de otros
+                            profesionales y colaborar en la creación de
+                            productos innovadores. Mi objetivo es seguir
+                            creciendo como desarrollador y seguir aprendiendo
+                            día a día para convertirme en un experto en el
+                            campo.
+                        </p>
+                    </section>
                 </section>
-                <section id="search" class="hidden">
-                    <h3
-                        class="text-xl font-extrabold md:text-2xl lg:text-3xl head-Gradient"
-                    >
-                        &lt; Lo que busco /&gt;
-                    </h3>
-                    <p class="text-sm md:text-md lg:text-xl">
-                        Estoy buscando formar parte de un equipo donde pueda
-                        aportar mis habilidades técnicas, aprender de otros
-                        profesionales y colaborar en la creación de productos
-                        innovadores. Mi objetivo es seguir creciendo como
-                        desarrollador y seguir aprendiendo día a día para
-                        convertirme en un experto en el campo.
-                    </p>
-                </section>
-            </section>
+            </article>
         </article>
     </article>
 </section>
@@ -152,7 +163,7 @@
     });
 </script>
 <style>
-     section:has(> figure) {
-        @apply bg-gray-300
+    section:has(> figure) {
+        @apply bg-gray-300;
     }
 </style>
