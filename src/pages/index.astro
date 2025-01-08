@@ -1,9 +1,15 @@
 ---
 import Card from "@/components/Card.astro";
 import Layout from "@/layouts/Layout.astro";
+import StarsField from "@/components/StarsField.astro";
+interface Props {
+  numberOfStars?: number;
+}
 ---
 
 <Layout title="Dracodev" description="Welcome to my portfolio">
+  <article>
+    <StarsField numberOfStars={360} />
+  </article>
   <Card />
 </Layout>
-

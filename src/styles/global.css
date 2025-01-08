@@ -22,16 +22,6 @@
     }
   }
 
-  .box-shadow {
-    border: 5px solid #80ff60;
-    box-shadow: 0px 0px 10px #fafafa;
-  }
-
-  .white-shadow {
-    border: 5px solid #fafafa;
-    box-shadow: 0 0 10px #80ff60;
-  }
-
   .head-Gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-emerald-600;
   }

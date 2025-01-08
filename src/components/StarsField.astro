@@ -8,17 +8,19 @@ const { numberOfStars = 50 } = Astro.props;
 const stars = Array.from({ length: numberOfStars }, () => ({
   top: `${Math.random() * 100}%`,
   left: `${Math.random() * 100}%`,
-  delay: `${Math.random() * 2}s`
+  delay: `${Math.random() * 2}s`,
 }));
 ---
 
 <section class="star-field">
-  {stars.map((star, index) => (
-    <section
-      class="star"
-      style={`top: ${star.top}; left: ${star.left}; animation-delay: ${star.delay};`}
-    />
-  ))}
+  {
+    stars.map((star, index) => (
+      <section
+        class="star"
+        style={`top: ${star.top}; left: ${star.left}; animation-delay: ${star.delay};`}
+      />
+    ))
+  }
 </section>
 
 <style>
@@ -32,7 +34,8 @@ const stars = Array.from({ length: numberOfStars }, () => ({
   }
 
   @keyframes twinkle {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 0.2;
     }
     50% {
@@ -47,6 +50,7 @@ const stars = Array.from({ length: numberOfStars }, () => ({
     border-radius: 50%;
     position: absolute;
     animation: twinkle 2s infinite;
+    z-index: -1;
   }
 
   .star:nth-child(odd) {

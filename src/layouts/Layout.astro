@@ -1,13 +1,11 @@
 ---
-import StarsField from "@/components/StarsField.astro";
 import "@/styles/global.css";
 
 interface Props {
   title: string;
   description: string;
-  numberOfStars?: number;
 }
-const { title, description, numberOfStars = 150 } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <html lang="es">
@@ -21,19 +19,7 @@ const { title, description, numberOfStars = 150 } = Astro.props;
   </head>
   <body class="max-h-screen text-black bg-dark-gradient text-darkText">
     <section>
-      <article class="starry-night">
-        <StarsField numberOfStars={150} />
-      </article>
       <slot />
     </section>
   </body>
 </html>
-
-<style>
-  .starry-night {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-  }
-</style>
