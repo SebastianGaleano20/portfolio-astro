@@ -11,6 +11,23 @@ export const personal = {
   email: "sebastian.galeano20@gmail.com",
   github: "https://github.com/SebastianGaleano20",
   linkedin: "https://linkedin.com/in/sebastiangaleano20",
+  // ↓ Actualizar con la URL real de tu deploy (Vercel, dominio propio, etc.)
+  siteUrl: "https://sebastiangaleano.dev",
+  keywords: [
+    "FullStack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Node.js Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "JavaScript",
+    "TypeScript",
+    "PostgreSQL",
+    "AWS",
+    "Argentina",
+    "Sebastian Galeano",
+    "Portfolio",
+  ],
 };
 
 export const skills = {
