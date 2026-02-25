@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0a0f1e"/>
+      <stop offset="100%" stop-color="#0d1b2a"/>
+    </linearGradient>
+
+    <!-- Neon glow filter for text -->
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle grid pattern -->
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#1a3a5c" stroke-width="0.5" opacity="0.4"/>
+    </pattern>
+
+    <!-- Radial mask for grid -->
+    <radialGradient id="grid-mask" cx="50%" cy="50%" r="55%">
+      <stop offset="0%"   stop-color="white" stop-opacity="1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="fade-grid">
+      <rect width="1200" height="630" fill="url(#grid-mask)"/>
+    </mask>
+
+    <!-- Left glow -->
+    <radialGradient id="glow-left" cx="0%" cy="50%" r="60%">
+      <stop offset="0%"   stop-color="#00ff88" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#00ff88" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Right glow -->
+    <radialGradient id="glow-right" cx="100%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#0066ff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0066ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grid overlay -->
+  <rect width="1200" height="630" fill="url(#grid)" mask="url(#fade-grid)"/>
+
+  <!-- Glow blobs -->
+  <rect width="1200" height="630" fill="url(#glow-left)"/>
+  <rect width="1200" height="630" fill="url(#glow-right)"/>
+
+  <!-- Left border accent -->
+  <line x1="80" y1="140" x2="80" y2="490" stroke="#00ff88" stroke-width="2" opacity="0.6"/>
+  <circle cx="80" cy="140" r="4" fill="#00ff88" opacity="0.9"/>
+  <circle cx="80" cy="490" r="4" fill="#00ff88" opacity="0.4"/>
+
+  <!-- Greeting tag -->
+  <rect x="110" y="125" width="130" height="28" rx="4" fill="rgba(0,255,136,0.08)" stroke="#1a3a5c" stroke-width="1"/>
+  <text x="126" y="144" font-family="monospace" font-size="13" fill="#8badc7">— Hola, soy</text>
+
+  <!-- Main name -->
+  <text x="110" y="230" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" fill="#e8f4fd" letter-spacing="-1">Sebastian</text>
+  <text x="110" y="312" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" fill="#00ff88" letter-spacing="-1" filter="url(#neon-glow)">Galeano</text>
+
+  <!-- Role tag with code brackets -->
+  <text x="110" y="375" font-family="monospace" font-size="22" fill="#2a4a6b">&lt;</text>
+  <text x="132" y="375" font-family="monospace" font-size="22" fill="#8badc7">FullStack Developer</text>
+  <text x="428" y="375" font-family="monospace" font-size="22" fill="#2a4a6b">/&gt;</text>
+
+  <!-- Divider -->
+  <line x1="110" y1="405" x2="310" y2="405" stroke="#00ff88" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Tech badges row -->
+  <!-- React -->
+  <rect x="110" y="425" width="80" height="28" rx="4" fill="rgba(0,255,136,0.06)" stroke="rgba(0,255,136,0.2)" stroke-width="1"/>
+  <text x="150" y="444" font-family="monospace" font-size="12" fill="#00ff88" text-anchor="middle">React</text>
+
+  <!-- Next.js -->
+  <rect x="200" y="425" width="80" height="28" rx="4" fill="rgba(0,255,136,0.06)" stroke="rgba(0,255,136,0.2)" stroke-width="1"/>
+  <text x="240" y="444" font-family="monospace" font-size="12" fill="#00ff88" text-anchor="middle">Next.js</text>
+
+  <!-- Node.js -->
+  <rect x="290" y="425" width="80" height="28" rx="4" fill="rgba(0,255,136,0.06)" stroke="rgba(0,255,136,0.2)" stroke-width="1"/>
+  <text x="330" y="444" font-family="monospace" font-size="12" fill="#00ff88" text-anchor="middle">Node.js</text>
+
+  <!-- PostgreSQL -->
+  <rect x="380" y="425" width="100" height="28" rx="4" fill="rgba(0,255,136,0.06)" stroke="rgba(0,255,136,0.2)" stroke-width="1"/>
+  <text x="430" y="444" font-family="monospace" font-size="12" fill="#00ff88" text-anchor="middle">PostgreSQL</text>
+
+  <!-- TypeScript -->
+  <rect x="490" y="425" width="100" height="28" rx="4" fill="rgba(0,255,136,0.06)" stroke="rgba(0,255,136,0.2)" stroke-width="1"/>
+  <text x="540" y="444" font-family="monospace" font-size="12" fill="#00ff88" text-anchor="middle">TypeScript</text>
+
+  <!-- Site URL at bottom -->
+  <text x="110" y="520" font-family="monospace" font-size="15" fill="#2a4a6b">sebastiangaleano.dev</text>
+
+  <!-- Right side: code card decoration -->
+  <rect x="750" y="100" width="360" height="380" rx="12" fill="rgba(17,29,46,0.9)" stroke="#1a3a5c" stroke-width="1"/>
+
+  <!-- Code card header -->
+  <rect x="750" y="100" width="360" height="44" rx="12" fill="#0d1b2a"/>
+  <rect x="750" y="132" width="360" height="12" fill="#0d1b2a"/>
+  <circle cx="778" cy="122" r="6" fill="#ff5f57"/>
+  <circle cx="798" cy="122" r="6" fill="#ffbd2e"/>
+  <circle cx="818" cy="122" r="6" fill="#28ca41"/>
+  <text x="840" y="127" font-family="monospace" font-size="12" fill="#8badc7">developer.ts</text>
+
+  <!-- Code lines -->
+  <text x="778" y="178" font-family="monospace" font-size="14" fill="#c586c0">const</text>
+  <text x="824" y="178" font-family="monospace" font-size="14" fill="#9cdcfe"> dev </text>
+  <text x="858" y="178" font-family="monospace" font-size="14" fill="#8badc7">= {</text>
+
+  <text x="796" y="210" font-family="monospace" font-size="13" fill="#9cdcfe">name:</text>
+  <text x="840" y="210" font-family="monospace" font-size="13" fill="#ce9178"> "S. Galeano"</text>
+
+  <text x="796" y="238" font-family="monospace" font-size="13" fill="#9cdcfe">role:</text>
+  <text x="836" y="238" font-family="monospace" font-size="13" fill="#ce9178"> "FullStack"</text>
+
+  <text x="796" y="266" font-family="monospace" font-size="13" fill="#9cdcfe">stack:</text>
+  <text x="844" y="266" font-family="monospace" font-size="13" fill="#ffd700">[</text>
+
+  <text x="814" y="292" font-family="monospace" font-size="12" fill="#ce9178">"React", "Next.js",</text>
+  <text x="814" y="314" font-family="monospace" font-size="12" fill="#ce9178">"Node", "Postgres"</text>
+
+  <text x="796" y="340" font-family="monospace" font-size="13" fill="#ffd700">]</text>
+
+  <text x="796" y="368" font-family="monospace" font-size="13" fill="#9cdcfe">status:</text>
+  <text x="852" y="368" font-family="monospace" font-size="13" fill="#00ff88"> "available"</text>
+
+  <text x="778" y="440" font-family="monospace" font-size="14" fill="#8badc7">}</text>
+
+  <!-- Available badge -->
+  <rect x="780" y="456" width="130" height="28" rx="14" fill="rgba(0,255,136,0.1)" stroke="rgba(0,255,136,0.3)" stroke-width="1"/>
+  <circle cx="800" cy="470" r="4" fill="#00ff88"/>
+  <text x="812" y="475" font-family="Arial" font-size="12" fill="#00ff88" font-weight="500">Open to work</text>
+</svg>

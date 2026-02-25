@@ -1,30 +1,83 @@
 ---
 import "@/styles/globals.css";
+import { personal } from '../data/portfolio.js';
 
 interface Props {
-  title?: string;
+  title?:       string;
   description?: string;
+  image?:       string;
+  canonical?:   string;
 }
 
 const {
-  title       = "Sebastian Galeano | FullStack Developer",
-  description = "Portfolio de Sebastian Galeano, FullStack Developer especializado en React, Next.js, Node.js y PostgreSQL.",
+  title       = `${personal.name} | FullStack Developer`,
+  description = `Desarrollador FullStack especializado en React, Next.js, Node.js y PostgreSQL. +2 años construyendo productos web de alto rendimiento. Disponible para proyectos freelance y posiciones full-time.`,
+  image       = `${personal.siteUrl}/assets/og-image.svg`,
+  canonical   = personal.siteUrl,
 } = Astro.props;
+
+const keywords = personal.keywords.join(", ");
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": personal.name,
+  "jobTitle": personal.role,
+  "url": personal.siteUrl,
+  "email": personal.email,
+  "description": description,
+  "sameAs": [
+    personal.github,
+    personal.linkedin,
+  ],
+  "knowsAbout": [
+    "JavaScript", "TypeScript", "React", "Next.js", "Astro",
+    "Node.js", "NestJS", "Express", "PostgreSQL", "Prisma",
+    "AWS", "TailwindCSS", "Git", "Figma",
+  ],
+  "alumniOf": [
+    { "@type": "Organization", "name": "Global Learning" },
+    { "@type": "Organization", "name": "UTN" },
+    { "@type": "Organization", "name": "Argentina Programa 4.0" },
+  ],
+};
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <meta name="theme-color" content="#0a0f1e" />
 
-    <!-- Open Graph -->
-    <meta property="og:title"       content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type"        content="website" />
+    <!-- ─── SEO Básico ──────────────────────────────────── -->
+    <title>{title}</title>
+    <meta name="description"   content={description} />
+    <meta name="keywords"      content={keywords} />
+    <meta name="author"        content={personal.name} />
+    <meta name="robots"        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical"      href={canonical} />
+    <meta name="theme-color"   content="#0a0f1e" />
 
-    <!-- Fonts -->
+    <!-- ─── Open Graph (LinkedIn, WhatsApp, Slack, Facebook) ── -->
+    <meta property="og:type"         content="website" />
+    <meta property="og:url"          content={canonical} />
+    <meta property="og:title"        content={title} />
+    <meta property="og:description"  content={description} />
+    <meta property="og:image"        content={image} />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt"    content={`${personal.name} — FullStack Developer Portfolio`} />
+    <meta property="og:locale"       content="es_AR" />
+    <meta property="og:site_name"    content={`${personal.name} — Portfolio`} />
+
+    <!-- ─── Twitter / X Card ───────────────────────────── -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:url"         content={canonical} />
+    <meta name="twitter:title"       content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image"       content={image} />
+    <meta name="twitter:image:alt"   content={`${personal.name} — FullStack Developer Portfolio`} />
+
+    <!-- ─── Fuentes ─────────────────────────────────────── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,8 +85,12 @@ const {
       rel="stylesheet"
     />
 
-    <link rel="icon" href="/assets/icons/logo.svg" type="image/svg+xml" />
-    <title>{title}</title>
+    <!-- ─── Favicon & manifest ──────────────────────────── -->
+    <link rel="icon"             href="/assets/icons/logo.svg" type="image/svg+xml" />
+    <link rel="manifest"         href="/manifest.json" />
+
+    <!-- ─── JSON-LD — Person Schema (Google Knowledge Panel) ─ -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
     <slot />
