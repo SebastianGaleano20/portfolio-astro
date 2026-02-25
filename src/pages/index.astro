@@ -1,15 +1,28 @@
 ---
-import Card from "@/components/Card.astro";
-import Layout from "@/layouts/Layout.astro";
-import StarsField from "@/components/StarsField.astro";
-interface Props {
-  numberOfStars?: number;
-}
+import Layout from '../layouts/Layout.astro';
+import Navbar          from '../components/layout/Navbar.astro';
+import Footer          from '../components/layout/Footer.astro';
+import ScrollProgress  from '../components/layout/ScrollProgress.astro';
+import Hero            from '../components/sections/Hero.astro';
+import About           from '../components/sections/About.astro';
+import Skills          from '../components/sections/Skills.astro';
+import Projects        from '../components/sections/Projects.astro';
+import Certifications  from '../components/sections/Certifications.astro';
+import Contact         from '../components/sections/Contact.astro';
 ---
 
-<Layout title="Dracodev" description="Welcome to my portfolio">
-  <article>
-    <StarsField numberOfStars={360} />
-  </article>
-  <Card />
+<Layout>
+  <ScrollProgress />
+  <Navbar />
+
+  <main id="main-content" role="main">
+    <Hero />
+    <About />
+    <Skills />
+    <Projects />
+    <Certifications />
+    <Contact />
+  </main>
+
+  <Footer />
 </Layout>

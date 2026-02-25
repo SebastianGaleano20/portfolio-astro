@@ -1,0 +1,39 @@
+---
+---
+
+<div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Scroll progress" aria-valuenow={0} aria-valuemin={0} aria-valuemax={100}>
+  <div class="scroll-progress__bar" id="scrollBar"></div>
+</div>
+
+<script>
+  const bar = document.getElementById('scrollBar');
+  const container = document.getElementById('scrollProgress');
+
+  window.addEventListener('scroll', () => {
+    const scrollTop    = window.scrollY;
+    const docHeight    = document.documentElement.scrollHeight - window.innerHeight;
+    const progress     = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    if (bar) bar.style.width = `${progress}%`;
+    container?.setAttribute('aria-valuenow', String(Math.round(progress)));
+  });
+</script>
+
+<style>
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(0, 255, 136, 0.1);
+    z-index: 200;
+  }
+
+  .scroll-progress__bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--color-accent-neon), var(--color-accent-glow));
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+    transition: width 0.1s linear;
+  }
+</style>

@@ -1,25 +1,56 @@
 ---
-import "@/styles/global.css";
+import "@/styles/globals.css";
 
 interface Props {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
 }
-const { title, description } = Astro.props;
+
+const {
+  title       = "Sebastian Galeano | FullStack Developer",
+  description = "Portfolio de Sebastian Galeano, FullStack Developer especializado en React, Next.js, Node.js y PostgreSQL.",
+} = Astro.props;
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/icons/logo.svg" type="image/x-icon" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0a0f1e" />
+
+    <!-- Open Graph -->
+    <meta property="og:title"       content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type"        content="website" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="/assets/icons/logo.svg" type="image/svg+xml" />
     <title>{title}</title>
   </head>
-  <body class="max-h-screen text-black bg-dark-gradient text-darkText">
-    <section>
-      <slot />
-    </section>
+  <body>
+    <slot />
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: '0px 0px -60px 0px' }
+      );
+
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>

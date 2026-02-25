@@ -1,0 +1,50 @@
+---
+interface Props {
+  name: string;
+  icon?: string;
+}
+
+const { name, icon } = Astro.props;
+---
+
+<div class="badge" role="listitem">
+  {icon && (
+    <img src={icon} alt={`${name} icon`} width="20" height="20" loading="lazy" />
+  )}
+  <span>{name}</span>
+</div>
+
+<style>
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1rem;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    cursor: default;
+    transition:
+      border-color var(--transition-normal),
+      box-shadow var(--transition-normal),
+      color var(--transition-normal),
+      transform var(--transition-fast);
+  }
+
+  .badge:hover {
+    border-color: var(--color-accent-neon);
+    box-shadow: 0 0 12px rgba(0, 255, 136, 0.2);
+    color: var(--color-accent-neon);
+    transform: translateY(-2px);
+  }
+
+  .badge img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+</style>
