@@ -8,7 +8,7 @@ export const personal = {
     "Problem Solver",
   ],
   bio: "Desarrollador FullStack con +2 años construyendo productos web de alto rendimiento. Me especializo en React + Next.js para frontend y Node.js + PostgreSQL para backend, con foco en arquitectura limpia y experiencias de usuario memorables.",
-  email: "sebastian.galeano20@gmail.com",
+  email: "sebastiangaleano.dev@gmail.com",
   github: "https://github.com/SebastianGaleano20",
   linkedin: "https://linkedin.com/in/sebastiangaleano20",
   // ↓ Actualizar con la URL real de tu deploy (Vercel, dominio propio, etc.)
@@ -147,7 +147,7 @@ export const certifications = [
       {
         name: "FullStack Developer MERN",
         topics: ["HTML5", "CSS3", "TailwindCSS", "React", "JavaScript", "TypeScript", "Node.js", "Express", "MongoDB"],
-        image: "/assets/images/C2.png",
+        image: "/assets/images/C4.png",
       },
     ],
   },
@@ -168,7 +168,7 @@ export const certifications = [
       {
         name: "Front-End Developer",
         topics: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Git", "Testing", "Performance", "Accessibility"],
-        image: "/assets/images/C4.png",
+        image: "/assets/images/C2.png",
       },
     ],
   },

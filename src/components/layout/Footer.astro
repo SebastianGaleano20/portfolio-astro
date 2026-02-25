@@ -3,31 +3,29 @@ import { personal } from '../../data/portfolio.js';
 ---
 
 <footer class="footer" role="contentinfo">
-  <div class="container footer__inner">
+  <div class="footer__inner">
     <p class="footer__copy">
-      &copy; {new Date().getFullYear()} <span class="highlight-neon">{personal.name}</span> — Built with Astro
+      &copy; {new Date().getFullYear()} &mdash; <span class="footer__name">{personal.name}</span>
     </p>
-    <nav class="footer__links" aria-label="Footer navigation">
-      <a href="#hero" class="footer__link">Inicio</a>
-      <a href="#projects" class="footer__link">Proyectos</a>
-      <a href="#contact" class="footer__link">Contacto</a>
-    </nav>
+    <p class="footer__stack">
+      Hecho con <span class="footer__tech" translate="no">Astro</span> &amp; <span class="footer__tech" translate="no">TypeScript</span>
+    </p>
   </div>
 </footer>
 
 <style>
   .footer {
     border-top: 1px solid var(--color-border);
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     background: var(--color-bg-secondary);
   }
 
   .footer__inner {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.4rem;
+    text-align: center;
   }
 
   .footer__copy {
@@ -35,26 +33,19 @@ import { personal } from '../../data/portfolio.js';
     color: var(--color-text-secondary);
   }
 
-  .footer__links {
-    display: flex;
-    gap: 1.5rem;
-  }
-
-  .footer__link {
-    font-size: 0.85rem;
-    color: var(--color-text-secondary);
-    transition: color var(--transition-fast);
-  }
-
-  .footer__link:hover {
+  .footer__name {
     color: var(--color-accent-neon);
+    font-weight: 600;
   }
 
-  @media (max-width: 480px) {
-    .footer__inner {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+  .footer__stack {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    opacity: 0.7;
+  }
+
+  .footer__tech {
+    font-family: var(--font-code);
+    font-size: 0.78rem;
   }
 </style>

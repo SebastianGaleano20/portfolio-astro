@@ -1,15 +1,15 @@
 ---
 const navLinks = [
-  { label: "About",    href: "#about" },
-  { label: "Skills",   href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Certs",    href: "#certifications" },
-  { label: "Contact",  href: "#contact" },
+  { label: "Sobre mí",  href: "#about" },
+  { label: "Habilidades", href: "#skills" },
+  { label: "Proyectos",   href: "#projects" },
+  { label: "Certs",      href: "#certifications" },
+  { label: "Contacto",   href: "#contact" },
 ];
 ---
 
 <header class="navbar" id="navbar" role="banner">
-  <nav class="container navbar__inner" aria-label="Main navigation">
+  <nav class="container navbar__inner" aria-label="Navegación principal">
     <a href="#hero" class="navbar__logo" aria-label="Ir al inicio">
       <img src="/assets/icons/logo.svg" alt="SG Logo" width="34" height="34" />
       <span class="navbar__name">SG<span class="highlight-neon">.</span></span>
@@ -23,14 +23,14 @@ const navLinks = [
       ))}
     </ul>
 
-    <a href="#contact" class="btn-outline navbar__cta" aria-label="Hire me">
-      Hire me
+    <a href="#contact" class="btn-outline navbar__cta" aria-label="Contrátame">
+      Contrátame
     </a>
 
     <button
       class="navbar__hamburger"
       id="hamburger"
-      aria-label="Toggle mobile menu"
+      aria-label="Abrir menú"
       aria-expanded="false"
       aria-controls="mobile-menu"
     >
@@ -40,7 +40,7 @@ const navLinks = [
     </button>
   </nav>
 
-  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navegación móvil">
     <ul role="list">
       {navLinks.map((link) => (
         <li>
@@ -48,7 +48,7 @@ const navLinks = [
         </li>
       ))}
       <li>
-        <a href="#contact" class="mobile-menu__cta">Hire me</a>
+        <a href="#contact" class="mobile-menu__cta">Contrátame</a>
       </li>
     </ul>
   </div>
