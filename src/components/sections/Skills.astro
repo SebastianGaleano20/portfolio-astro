@@ -1,0 +1,103 @@
+---
+import { skills } from '../../data/portfolio.js';
+import Badge from '../ui/Badge.astro';
+
+const categories = Object.entries(skills);
+---
+
+<section class="section skills" id="skills" aria-labelledby="skills-title">
+  <div class="container">
+    <div class="skills__header reveal">
+      <h2 class="section-title" id="skills-title">Tech <span>Stack</span></h2>
+      <div class="section-divider" role="presentation"></div>
+      <p class="section-subtitle">Tecnologías que uso para construir productos completos</p>
+    </div>
+
+    <div class="skills__categories">
+      {categories.map(([category, items], index) => (
+        <div class={`skills__category reveal reveal-delay-${index + 1}`}>
+          <div class="skills__category-header">
+            <span class="skills__category-icon" aria-hidden="true">
+              {category === 'Frontend' && '⚡'}
+              {category === 'Backend'  && '⚙️'}
+              {category === 'Tools'    && '🛠️'}
+              {category === 'DevOps'   && '☁️'}
+            </span>
+            <h3 class="skills__category-name">{category}</h3>
+            <span class="skills__category-count">{items.length}</span>
+          </div>
+          <div class="skills__badges" role="list" aria-label={`${category} skills`}>
+            {items.map((skill) => (
+              <Badge name={skill.name} icon={skill.icon} />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills__header {
+    margin-bottom: 3rem;
+  }
+
+  .skills__categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .skills__category {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    transition: border-color var(--transition-normal);
+  }
+
+  .skills__category:hover {
+    border-color: rgba(0, 255, 136, 0.25);
+  }
+
+  .skills__category-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .skills__category-icon {
+    font-size: 1.1rem;
+  }
+
+  .skills__category-name {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .skills__category-count {
+    margin-left: auto;
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    color: var(--color-accent-neon);
+    background: rgba(0, 255, 136, 0.08);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    padding: 0.1rem 0.5rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .skills__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  @media (max-width: 768px) {
+    .skills__categories {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

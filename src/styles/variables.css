@@ -1,0 +1,46 @@
+:root {
+  /* ─── Colors ─────────────────────────────────────── */
+  --color-bg-primary:     #0a0f1e;
+  --color-bg-secondary:   #0d1b2a;
+  --color-bg-card:        #111d2e;
+  --color-accent-neon:    #00ff88;
+  --color-accent-glow:    #00ffaa;
+  --color-text-primary:   #e8f4fd;
+  --color-text-secondary: #8badc7;
+  --color-border:         #1a3a5c;
+  --color-metallic:       #2a4a6b;
+
+  /* ─── Typography ─────────────────────────────────── */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-code:    'JetBrains Mono', monospace;
+
+  /* ─── Spacing ────────────────────────────────────── */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* ─── Border radius ──────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+
+  /* ─── Transitions ────────────────────────────────── */
+  --transition-fast:   0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow:   0.5s ease;
+
+  /* ─── Shadows ────────────────────────────────────── */
+  --shadow-card:        0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-neon:        0 0 20px rgba(0, 255, 136, 0.3);
+  --shadow-neon-strong: 0 0 40px rgba(0, 255, 136, 0.5);
+
+  /* ─── Layout ─────────────────────────────────────── */
+  --section-padding: clamp(4rem, 8vw, 8rem);
+  --navbar-height:   72px;
+}

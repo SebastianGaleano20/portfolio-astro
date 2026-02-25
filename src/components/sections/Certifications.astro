@@ -1,0 +1,187 @@
+---
+import { certifications } from '../../data/portfolio.js';
+---
+
+<section class="section certs" id="certifications" aria-labelledby="certs-title">
+  <div class="container">
+    <div class="certs__header reveal">
+      <h2 class="section-title" id="certs-title">Certificaciones <span>&amp; formación</span></h2>
+      <div class="section-divider" role="presentation"></div>
+      <p class="section-subtitle">Aprendizaje continuo respaldado por instituciones reconocidas</p>
+    </div>
+
+    <div class="certs__timeline">
+      {certifications.map((cert, certIndex) => (
+        <div class={`certs__group reveal reveal-delay-${certIndex + 1}`}>
+          <div class="certs__group-header">
+            <div class="certs__timeline-dot" aria-hidden="true"></div>
+            <div class="certs__group-meta">
+              <h3 class="certs__entity">{cert.entity}</h3>
+              <span class="certs__year">{cert.year}</span>
+            </div>
+          </div>
+
+          <div class="certs__courses">
+            {cert.courses.map((course) => (
+              <article class="cert-card glass-card" aria-label={`${course.name} - ${cert.entity}`}>
+                {course.image && (
+                  <div class="cert-card__image-wrap">
+                    <img
+                      src={course.image}
+                      alt={`Certificado ${course.name}`}
+                      class="cert-card__image"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+                <div class="cert-card__body">
+                  <h4 class="cert-card__name">{course.name}</h4>
+                  <div class="cert-card__topics" role="list" aria-label="Topics covered">
+                    {course.topics.map((topic) => (
+                      <span class="cert-card__topic tech-tag" role="listitem">{topic}</span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .certs__header {
+    margin-bottom: 3rem;
+  }
+
+  .certs__timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-left: 2rem;
+  }
+
+  .certs__timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    bottom: 12px;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      var(--color-accent-neon),
+      var(--color-border),
+      transparent
+    );
+  }
+
+  .certs__group-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .certs__timeline-dot {
+    position: absolute;
+    left: -6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--color-accent-neon);
+    border: 2px solid var(--color-bg-primary);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    flex-shrink: 0;
+  }
+
+  .certs__group-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .certs__entity {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+
+  .certs__year {
+    font-family: var(--font-code);
+    font-size: 0.8rem;
+    color: var(--color-accent-neon);
+    background: rgba(0, 255, 136, 0.08);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    padding: 0.15rem 0.6rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .certs__courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .cert-card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cert-card__image-wrap {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .cert-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+  }
+
+  .cert-card:hover .cert-card__image {
+    transform: scale(1.03);
+  }
+
+  .cert-card__body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cert-card__name {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .cert-card__topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .cert-card__topic {
+    font-size: 0.68rem;
+  }
+
+  @media (max-width: 768px) {
+    .certs__timeline {
+      padding-left: 1.5rem;
+    }
+
+    .certs__courses {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

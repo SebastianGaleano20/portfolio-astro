@@ -1,0 +1,60 @@
+---
+import { personal } from '../../data/portfolio.js';
+---
+
+<footer class="footer" role="contentinfo">
+  <div class="container footer__inner">
+    <p class="footer__copy">
+      &copy; {new Date().getFullYear()} <span class="highlight-neon">{personal.name}</span> — Built with Astro
+    </p>
+    <nav class="footer__links" aria-label="Footer navigation">
+      <a href="#hero" class="footer__link">Inicio</a>
+      <a href="#projects" class="footer__link">Proyectos</a>
+      <a href="#contact" class="footer__link">Contacto</a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--color-border);
+    padding: 2rem 0;
+    background: var(--color-bg-secondary);
+  }
+
+  .footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer__copy {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+  }
+
+  .footer__links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .footer__link {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    transition: color var(--transition-fast);
+  }
+
+  .footer__link:hover {
+    color: var(--color-accent-neon);
+  }
+
+  @media (max-width: 480px) {
+    .footer__inner {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+</style>

@@ -1,0 +1,175 @@
+@import './variables.css';
+@import './animations.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Base ────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Layout utilities ────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+.section {
+  padding: var(--section-padding) 0;
+}
+
+/* ─── Typography utilities ────────────────────────────────── */
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.section-title span {
+  color: var(--color-accent-neon);
+}
+
+.section-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+.section-divider {
+  height: 2px;
+  width: 60px;
+  background: linear-gradient(90deg, var(--color-accent-neon), transparent);
+  margin: 0.75rem 0 2.5rem;
+}
+
+/* ─── Neon highlight ──────────────────────────────────────── */
+.highlight-neon {
+  color: var(--color-accent-neon);
+  text-shadow:
+    0 0 7px #00ff88,
+    0 0 14px #00ff88,
+    0 0 30px #00ff8840;
+  animation: neon-pulse 2.5s ease-in-out infinite alternate;
+}
+
+/* ─── Glassmorphism card ──────────────────────────────────── */
+.glass-card {
+  background: rgba(17, 29, 46, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color var(--transition-normal),
+    box-shadow var(--transition-normal),
+    transform var(--transition-normal);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 255, 136, 0.4);
+  box-shadow: var(--shadow-neon);
+  transform: translateY(-4px);
+}
+
+/* ─── Tech tag ────────────────────────────────────────────── */
+.tech-tag {
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  background: rgba(0, 255, 136, 0.08);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  color: var(--color-accent-neon);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+/* ─── Buttons ─────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: var(--color-accent-neon);
+  color: var(--color-bg-primary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: box-shadow var(--transition-normal), transform var(--transition-fast);
+}
+
+.btn-primary:hover {
+  box-shadow: var(--shadow-neon-strong);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: transparent;
+  color: var(--color-accent-neon);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-accent-neon);
+  cursor: pointer;
+  transition: background var(--transition-normal), box-shadow var(--transition-normal), transform var(--transition-fast);
+}
+
+.btn-outline:hover {
+  background: rgba(0, 255, 136, 0.08);
+  box-shadow: var(--shadow-neon);
+  transform: translateY(-2px);
+}
+
+/* ─── Custom scrollbar ────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg-secondary); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-metallic);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent-neon); }

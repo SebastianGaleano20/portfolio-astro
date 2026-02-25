@@ -1,0 +1,48 @@
+---
+import { projects } from '../../data/portfolio.js';
+import ProjectCard from '../ui/ProjectCard.astro';
+---
+
+<section class="section projects" id="projects" aria-labelledby="projects-title">
+  <div class="container">
+    <div class="projects__header reveal">
+      <h2 class="section-title" id="projects-title">Proyectos <span>destacados</span></h2>
+      <div class="section-divider" role="presentation"></div>
+      <p class="section-subtitle">Productos reales con impacto real — código en producción</p>
+    </div>
+
+    <div class="projects__grid">
+      {projects.map((project, index) => (
+        <div class={`reveal reveal-delay-${(index % 2) + 1}`}>
+          <ProjectCard
+            name={project.name}
+            description={project.description}
+            bullets={project.bullets}
+            tech={project.tech}
+            github={project.github}
+            live={project.live}
+            image={project.image}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects__header {
+    margin-bottom: 3rem;
+  }
+
+  .projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.75rem;
+  }
+
+  @media (max-width: 480px) {
+    .projects__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
